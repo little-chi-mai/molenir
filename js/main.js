@@ -63,10 +63,10 @@ $(document).ready(function() {
     $(holes).on('click', cursorActivate);
     setTimeout(() => {
       timeUp = true;
-      $('body').removeClass('cursor');
       
       setTimeout(() => {
         $(holes).off('click', cursorActivate);
+        $('body').removeClass('cursor');
         $('#startButton').removeClass('invisible').addClass('visible');
       }, 1000);
       
