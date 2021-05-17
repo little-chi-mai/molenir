@@ -67,7 +67,7 @@ $(document).ready(function() {
       setTimeout(() => {
         $(holes).off('click', cursorActivate);
         $('body').removeClass('cursor');
-        $('#startButton').removeClass('invisible').addClass('visible');
+        $('#startButton').text('Play again!').removeClass('invisible').addClass('visible');
       }, 1000);
       
     }, 5000);
