@@ -64,8 +64,9 @@ $(document).ready(function() {
     setTimeout(() => {
       timeUp = true;
       $('body').removeClass('cursor');
-      $(holes).off('click', cursorActivate);
+      
       setTimeout(() => {
+        $(holes).off('click', cursorActivate);
         $('#startButton').removeClass('invisible').addClass('visible');
       }, 1000);
       
