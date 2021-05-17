@@ -4,6 +4,8 @@ html {
   box-sizing: border-box;
   font-size: 10px;
   background: #ffc600;
+  background-image: radial-gradient(#ffc600, #f06d06);
+  background-repeat: cover;
 }
 
 *,
