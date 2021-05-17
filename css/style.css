@@ -45,8 +45,9 @@ h1 {
   background-color: rgb(27, 94, 27);
   font-family: "Pangolin", cursive;
   height: 7rem;
-  width: 12rem;
+  width: 20rem;
   border-radius: 10rem;
+  font-size: 4rem;
 
   display: block;
   text-align: center;
