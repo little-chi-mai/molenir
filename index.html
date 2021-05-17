@@ -2,16 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Whack A Mole!</title>
+  <title>Mole-nir!</title>
   <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/jquery.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
   <script src="js/main.js"></script>
+  <script src="js/game.js"></script>
 </head>
 <body>
 
-  <h1>Whack-a-mole! <span class="score">0</span></h1>
-  <button id="startButton">Start!</button>
+  <h1>Mole-nir! <span class="score">0</span></h1>
+  <div class="button-wrapper">
+    <button id="startButton">Start!</button>
+
+  </div>
+
+  <!-- <div id="app">
+    <button v-if="playing">Start</button>
+  </div> -->
+  
 
   <div class="game">
     <div class="hole hole1">

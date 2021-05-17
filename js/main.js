@@ -1,4 +1,16 @@
 $(document).ready(function() {
+  // const app = new Vue({
+  //   el: '#startButton',
+  //   data: {
+  //     playing: true
+  //   }, 
+  //   mounted() {
+  //     $(this).on('click', startGame);
+  //   }
+  // })
+  // console.log(app.playing);
+  // app.playing = false;
+  // console.log(app.playing);
   
   const holes = document.querySelectorAll('.hole');
   const scoreBoard = document.querySelector('.score');
@@ -34,13 +46,14 @@ $(document).ready(function() {
     }, time)
   }
 
-  console.log($('body'));
   function startGame() {
+    console.log("GAME STARTED");
     scoreBoard.textContent = 0;
     timeUp = false;
     score = 0;
     peep();
     $('body').addClass('cursor');
+    $('#startButton').removeClass('visible').addClass('invisible');
     const cursorActivate = function () {
       $('body').removeClass('cursor').addClass('cursor-hit');
       setTimeout(() => {
@@ -52,10 +65,16 @@ $(document).ready(function() {
       timeUp = true;
       $('body').removeClass('cursor');
       $(holes).off('click', cursorActivate);
+      setTimeout(() => {
+        $('#startButton').removeClass('invisible').addClass('visible');
+      }, 1000);
+      
     }, 5000);
-  }
+  };
 
   $('#startButton').on('click', startGame);
+
+  
 
   function bonk(e) {
     if (!e.originalEvent.isTrusted) return; // cheater!
@@ -79,4 +98,6 @@ $(document).ready(function() {
       $('body').append(element);
       element.on('animationend',function(){$(element).remove()});
   }
+
+  
 })
